@@ -2,11 +2,11 @@
 # и выведите на экран их сумму.
 
 number_1 = int(input('Введите число k: '))
-myarray = []
+my_list = []
 
 for i in range (1, number_1 + 1):
-    myarray.append(round((1 + 1/i)**i, 2))
+    my_list.append(round((1 + 1/i)**i, 2))
 res = 0
-for j in myarray:
+for j in my_list:
     res = res + j
 print(f'Сумма элементов последовательности равна {res}')
