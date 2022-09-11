@@ -12,7 +12,6 @@ print(my_list)
 
 a, b = (int(i) for i in input('Введите через пробел позиции: ').split())
 
-res = 1
-for i in range (a - 1, b):
-    res = res * my_list[i]
+res = my_list[a - 1] * my_list[b - 1]
+
 print(f'Произведение чисел между позициями {a} и {b} равно {res}')
