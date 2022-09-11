@@ -3,10 +3,10 @@
 
 number_1 = int(input('Введите число '))
 
-myarray = []
+my_list = []
 temp = 1
 
 for i in range(1, number_1 + 1):
     temp = temp * i
-    myarray.append(temp)
-print(myarray)
+    my_list.append(temp)
+print(my_list)
