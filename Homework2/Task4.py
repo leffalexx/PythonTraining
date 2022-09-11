@@ -4,15 +4,15 @@
 from random import Random, randint
 
 n = int(input('Введите число N '))
-myarray = []
+my_list = []
 
 for i in range (n):
-    myarray.append(randint(-n, n))
-print(myarray)
+    my_list.append(randint(-n, n))
+print(my_list)
 
 a, b = (int(i) for i in input('Введите через пробел позиции: ').split())
 
 res = 1
 for i in range (a - 1, b):
-    res = res * myarray[i]
+    res = res * my_list[i]
 print(f'Произведение чисел между позициями {a} и {b} равно {res}')
