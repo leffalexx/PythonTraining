@@ -9,7 +9,7 @@ def difference(given_list):
     substracted_list = []
     for i in range(len(given_list)):
         j = given_list[i] % 1
-        j = round(j, 2)
+        j = round(j, 5)
         substracted_list.append(j)
     res = max(substracted_list) - min(substracted_list)
     return res
