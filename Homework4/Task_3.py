@@ -7,11 +7,13 @@ from typing import List
 
 def unique(lis):
     mylist = []
-    for i in range (len(lis)):
-            if lis[i] not in mylist:
-                mylist.append(lis[i])
+    temp = 0
+    for i in lis:
+        temp = lis.count(i)
+        if temp == 1:
+            mylist.append(i)
     return mylist
-    
+
 list = [randint(1,11) for i in range(1, 11)]
 print(list)
 print(unique(list))
