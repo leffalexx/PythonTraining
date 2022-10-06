@@ -24,7 +24,6 @@ def game(candies):
   turn = 0
   while candies > 0:
     candies = user(candies)
-    turn += 1
     candies = bot(candies, 28)
     turn +=1
   if turn % 2 == 0:
