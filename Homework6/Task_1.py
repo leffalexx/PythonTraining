@@ -1,32 +1,21 @@
-# # 1. Задайте список из нескольких чисел. Напишите программу, которая найдёт сумму элементов списка, стоящих на нечётной позиции.
+# # 3. Задайте список из вещественных чисел. Напишите программу, которая найдёт разницу
+# # между максимальным и минимальным значением дробной части элементов.
 
-# from random import randint
+# my_list = [1.1, 1.2, 3.1, 10.01]
 
-# my_list = []
-# for i in range(10):
-#     my_list.append(randint(-100, 100))
-# print(my_list)
+# def difference(given_list):
+#     substracted_list = []
+#     for i in range(len(given_list)):
+#         j = given_list[i] % 1
+#         j = round(j, 5)
+#         substracted_list.append(j)
+#     res = max(substracted_list) - min(substracted_list)
+#     return res
+# print(difference(my_list))
 
-# def oddsum(given_list):
-#     sum = 0
-#     for i in range(1, len(given_list), 2):
-#         sum += given_list[i]
-#     return sum
-# print(oddsum(my_list))
+def diff(num):
+    return round(num - int(num), 2)
 
-
-# 1. Задайте список из нескольких чисел. Напишите программу, которая найдёт сумму элементов списка, стоящих на нечётной позиции.
-
-from random import randint
-from functools import reduce
-
-my_list = [randint(-100, 100) for i in range(1,10)]
-print(my_list)
-
-odd_list = [my_list[i] for i in range(1, len(my_list), 2)]
-print(odd_list)
-
-sum = reduce(lambda x,y: x + y, odd_list)
-
-print(sum)
-
+my_list = [1.1, 1.2, 3.1, 10.01]
+result = list(map(diff, my_list))
+print(max(result) - min(result))
